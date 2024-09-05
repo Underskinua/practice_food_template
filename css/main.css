@@ -139,6 +139,45 @@ body {
   background-color: currentColor;
 }
 
+.btn {
+  padding: 2rem 4.5rem;
+  color: #ffffff;
+  font-weight: 700;
+  background-color: #ff7352;
+  border-radius: 1.2rem;
+  cursor: pointer;
+}
+
+.arrow-link {
+  display: block;
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  background-color: #ff7352;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8rem;
+  margin: 0 auto;
+  background-image: url(./../images/icons/icon_arrow_down_short.svg);
+  background-repeat: no-repeat;
+  background-size: 2.4rem;
+  background-position: center;
+}
+.arrow-link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 8rem;
+  height: 8rem;
+  background-image: url(./../images/arc_orange.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -180,12 +219,44 @@ body {
 }
 
 .hero {
+  position: relative;
   height: 120rem;
   padding-top: 14rem;
-  background-image: url(../../images/hero_ellipse.svg);
+  background-image: url(./../images/hero_ellipse.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center bottom;
+  background-position: center bottom 11rem;
+}
+.hero::before, .hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 53rem;
+  height: 50rem;
+  background-image: url(./../images/big_burger.webp), url(./../images/white_ellipse.svg);
+  background-repeat: no-repeat;
+  background-position: right bottom, left top;
+  background-size: 48rem 37rem, 46rem 46rem;
+}
+.hero::before {
+  left: 3rem;
+}
+.hero::after {
+  right: 3rem;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+.hero__inner {
+  height: 100%;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero__content {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .hero__title {
   color: #ffffff;
@@ -204,4 +275,22 @@ body {
   max-width: 48rem;
   margin: 0 auto;
   margin-bottom: 10rem;
+}
+
+.search-form__inner {
+  max-width: 57rem;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 6px;
+}
+.search-form__label {
+  display: none;
+}
+.search-form__input {
+  padding: 2.6rem;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
