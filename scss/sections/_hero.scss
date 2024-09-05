@@ -1,0 +1,36 @@
+.hero { 
+    height: 120rem;
+    padding-top: 14rem;
+    background-image: url(../../images/hero_ellipse.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+
+    &__title {
+        color: $c-white;
+        // text-stroke: 2px $c-white; // -- делает буквы жирнее, дополнительная обводка
+        -webkit-text-stroke: 2px $c-white;
+        max-width: 80rem;
+        text-align: center;
+        margin: 0 auto;
+
+        &::before,
+        &::after {
+            // background-color: $c-white;
+            margin-top: -6rem;
+        }        
+    }
+    &__description {
+        font-size: 1.8rem;
+        color: rgba($c-white, 0.5);
+        text-align: center;
+        max-width: 48rem;
+        margin: 0 auto;
+        margin-bottom: 10rem;
+    }    
+    // &__form {
+
+    // }
+}
+
+
