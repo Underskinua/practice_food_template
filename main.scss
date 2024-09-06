@@ -1,5 +1,6 @@
 // abstract
 @import './scss/abstract/vars';
+@import './scss/abstract/mixins';
 
 
 // base
@@ -14,6 +15,8 @@
 // components
 @import './scss/sections/hero';
 @import './scss/components/search-form';
+@import './scss/components/product-card';
+@import './scss/sections/popular';
 
 // layouts
 
